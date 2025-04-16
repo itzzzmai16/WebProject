@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+         <link rel="stylesheet"href="css/style.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <button class="button" style="vertical-align:middle"><span><a href="index.html"><i class="fa-solid fa-house"></i></a></span></button>
+    <div class="header">
+    <center>
+        <h1>SOCIALS</h1>
+    </center>
+    </div>
+    <br>
+    <div class="content">
+        <center>
+            <i class="fa-brands fa-facebook"></i>
+            <a href="https://www.facebook.com/share/1AfkgmQToj/"><h1>FaceBook</h1></a>
+        </center>
+    </div>
+    <br>
+    <div class="content">
+        <center>
+
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcllme_elle%3Figsh%3DMWNwOHgxNWFkZmhubg%253D%253D&h=AT1v82qNnnxdmz9M2XKMgs9jGy51yEC0E-kBbr4RgQ9blc9fPdL-1Nc9FHCPT351xYExIRjAXmM1iOU5KBivDsBIVLxWNB8gBXMHD6xNrGJCNx7mPT2QI4vvJ4EJz_rby7UR7A"><h1>Instagram</h1></a>
+        </center>
+    </div>
+    <br>
+    <div class="content">
+        <p>You can send me message here...</p>
+    <form id="contactForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error-message" id="messageError"></span>
+        </div>
+        <button type="submit">Submit</button>
+        <div id="submissionMessage" class="hidden"></div>
+    </form>
+</div>
+    <script src="script.js"></script>
+</script>
+</body>
+</html>
