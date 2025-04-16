@@ -3,25 +3,21 @@ const body = document.body;
 const darkModeClass = 'dark-mode';
 const darkModeStorageKey = 'darkModeEnabled';
 
-// Function to enable dark mode
 function enableDarkMode() {
     body.classList.add(darkModeClass);
     localStorage.setItem(darkModeStorageKey, 'true');
 }
 
-// Function to disable dark mode
 function disableDarkMode() {
     body.classList.remove(darkModeClass);
     localStorage.setItem(darkModeStorageKey, 'false');
 }
 
-// Check if dark mode was previously enabled
 if (localStorage.getItem(darkModeStorageKey) === 'true') {
     enableDarkMode();
-    darkModeToggle.checked = true; // Update the toggle state
+    darkModeToggle.checked = true;
 }
 
-// Event listener for the toggle switch
 darkModeToggle.addEventListener('change', () => {
     if (darkModeToggle.checked) {
         enableDarkMode();
@@ -29,22 +25,6 @@ darkModeToggle.addEventListener('change', () => {
         disableDarkMode();
     }
 });
-// show more ini
-function myFunction() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
-  
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more"; 
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less"; 
-      moreText.style.display = "inline";
-    }
-  }
 
   const time = new Date().getHours(); //greeting
 let greeting;
@@ -72,7 +52,6 @@ event.preventDefault(); // Prevent the default form submission
 
     let isValid = true;
 
-        // Validate Name
     if (nameInput.value.trim() === '') {
             nameError.textContent = 'Please enter your name.';
             isValid = false;
@@ -80,7 +59,6 @@ event.preventDefault(); // Prevent the default form submission
             nameError.textContent = '';
     }
 
-        // Validate Email
     if (emailInput.value.trim() === '') {
             emailError.textContent = 'Please enter your email address.';
             isValid = false;
@@ -91,7 +69,6 @@ event.preventDefault(); // Prevent the default form submission
             emailError.textContent = '';
     }
 
-        // Validate Message
     if (messageInput.value.trim() === '') {
             messageError.textContent = 'Please enter your message.';
             isValid = false;
@@ -100,11 +77,10 @@ event.preventDefault(); // Prevent the default form submission
     }
 
     if (isValid) {
-            // If all validations pass, you can proceed with submitting the form data
-            // You can use Fetch API or XMLHttpRequest to send the data to a server-side script
+           
 const formData = new FormData(form);
 
-fetch('/submit-contact-form', { // Replace with your server-side endpoint
+fetch('/submit-contact-form', { 
 method: 'POST',
 body: formData
 })
@@ -125,12 +101,12 @@ body: formData
             submissionMessage.className = 'error-submission';
     });
     } else {
-            submissionMessage.textContent = ''; // Clear any previous submission messages
+            submissionMessage.textContent = ''; 
     }
     });
 
 function isValidEmail(email) {
-        // Basic email validation regex
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
