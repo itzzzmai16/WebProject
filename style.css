@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(186, 206, 219); /* Light background */
-    color: #333; /* Dark text */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    background-color: rgb(186, 206, 219); 
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .content {
@@ -11,7 +11,7 @@ body {
     border-radius: 5px;
 }
 
-/* Switch styles (optional, for a toggle switch appearance) */
+
 .switch {
     position: relative;
     display: inline-block;
@@ -71,14 +71,14 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* Dark mode styles */
+
 body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: hsl(0, 0%, 100%); /* Light text */
+    background-color: #121212; 
+    color: hsl(0, 0%, 100%); 
 }
 
 body.dark-mode .content {
-    background-color: #333; /* Dark content background */
+    background-color: #333; /* Dark content  ng background */
     color: #c98e8e;
 }
 .button {
@@ -119,10 +119,6 @@ body.dark-mode .content {
 .button:hover span:after {
   opacity: 1;
   right: 0;
-}
-
-#more {/* show more */
-    display: none;
 }
 
 form {/* formvalidation */
